@@ -1,1 +1,37 @@
+/* Author: Ovidiu-Daniel Toma, V1-10/05/16 */
+/* CSS Reset */
+.row,
+.column {
+  box-sizing: border-box;
+}
 
+.row:before,
+.row:after {
+  content:" ";
+  display: table;
+}
+
+.row:after {
+  clear:both;
+}
+
+/* Common Styles */
+.column {
+  position: relative;
+  float: left;
+}
+
+.column + .column {
+  margin-left:2%;
+}
+
+/*  Formula to find width of a sigle column
+    scw = (100 – (m * (mc – 1))) / mc
+    where SCW is single column width
+    m is margin
+    mc is maximum columns
+    result of single column width is 6.5 (6.5%) 
+  
+    Formula to find the width of the remainin columns
+    
+*/
