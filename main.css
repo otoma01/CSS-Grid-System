@@ -59,3 +59,51 @@
     2 in this case, formula might work with m = margin instead of 2
     cw1 = column width 1 == scw(single column width)
 */
+
+.column-1 {
+  width: 6.5%;
+} 
+
+.column-2 {
+  width: 15%;
+} 
+
+.column-3 {
+  width: 23.5%;
+}
+
+.column-4 {
+  width: 32.5%;
+}
+
+.column-5 {
+  width:40.5%;
+}
+
+.column-6 {
+  width: 49%;
+}
+
+.column-7 {
+  width: 57.5%;
+}
+
+.column-8 {
+  width: 66%;
+}
+
+.column-9 {
+  width: 74.5%;
+}
+
+.column-10 {
+  width: 83%;
+}
+
+.column-11 {
+  width: 91.5%;
+}
+
+.column-12 {
+  width: 100%
+}
