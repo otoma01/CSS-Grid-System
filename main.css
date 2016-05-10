@@ -1,5 +1,6 @@
 /* Author: Ovidiu-Daniel Toma, V1-10/05/16 */
 /* CSS Reset */
+
 .row,
 .column {
   box-sizing: border-box;
@@ -7,103 +8,139 @@
 
 .row:before,
 .row:after {
-  content:" ";
+  content: " ";
   display: table;
 }
 
 .row:after {
-  clear:both;
+  clear: both;
 }
 
 /* Common Styles */
+
 .column {
   position: relative;
   float: left;
+  display: block;
 }
 
 .column + .column {
-  margin-left:2%;
+  margin-left: 1.4%;
 }
+
 
 /*  Formula to find width of a sigle column
     scw = (100 – (m * (mc – 1))) / mc
+        // = (100 - (1.4 * (12-1))) /12
+        //= (100 - 15.4) / 12 = 84.6 / 12 = 7.05
     where SCW = single column width
     m = margin
     mc = maximum columns
-    result of single column width is 6.5 (6.5%) 
+    result of single column width is 7.05 (7.05%) 
   
     Formula to find the width of the remainin columns
     cw = (scw * cs) + (m * (cs – 1))
+    cs=2 // cw=(7.05 * 2) + (1.4 * (2-1)) = 14.1 + 1.4 = 15.5
+    cs=3 // cw=(7.05 * 3) + (1.4 * (3-1)) = 21.15 + 2.8 = 23.95
     where cw = column width
     scw = single column width
     cs = column span (vary from 2 to 12 in this case, because maximum column span is 12)
     m = margin
-    column-1 = 6.5%
-    column-2 = 15%
-    column-3 = 23.5%
-    column-4 = 32%
-    column-5 = 40.5%
-    column-6 = 49%
-    column-7 = 57.5%
-    column-8 = 66%
-    column-9 = 74.5%
-    column-10 = 83%
-    column-11 = 91.5%
+    column-1 = 7.05%
+    column-2 = 15.5%
+    column-3 = 23.95%
+    column-4 = 32.4%
+    column-5 = 40.85%
+    column-6 = 49.3%
+    column-7 = 57.75%
+    column-8 = 66.2%
+    column-9 = 74.65%
+    column-10 = 83.1%
+    column-11 = 91.55%
     column-12 = 100%
     
     Easier way to find column width after column-1 in this case where margin is 2 and column span is 12
-    cw(x)=(cs(x-1)+2)+cw1
+    cw(x)=(cs(x-1)+ (m+cw1)
     where cw = column width
     x number of columns span
     cs = column span
-    2 in this case, formula might work with m = margin instead of 2
+    m = margin
     cw1 = column width 1 == scw(single column width)
 */
 
+/* Column Width */
+
 .column-1 {
-  width: 6.5%;
-} 
+  width: 7.05%;
+}
 
 .column-2 {
-  width: 15%;
-} 
+  width: 15.5%;
+}
 
 .column-3 {
-  width: 23.5%;
+  width: 23.95%;
 }
 
 .column-4 {
-  width: 32.5%;
+  width: 32.4%;
 }
 
 .column-5 {
-  width:40.5%;
+  width: 40.85%;
 }
 
 .column-6 {
-  width: 49%;
+  width: 49.3%;
 }
 
 .column-7 {
-  width: 57.5%;
+  width: 57.75%;
 }
 
 .column-8 {
-  width: 66%;
+  width: 66.2%;
 }
 
 .column-9 {
-  width: 74.5%;
+  width: 74.65%;
 }
 
 .column-10 {
-  width: 83%;
+  width: 83.1%;
 }
 
 .column-11 {
-  width: 91.5%;
+  width: 91.55%;
 }
 
 .column-12 {
   width: 100%
+}
+
+
+/* Body Style */
+
+.column {
+  background: #eee;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #777;
+  padding: 15px;
+  min-height: 40px;
+  text-align: center;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.row:last-child {
+  margin-bottom: 5px;
+}
+
+.column {
+  color: black;
+  background: red;
+  border-color: black;
 }
